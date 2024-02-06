@@ -1,5 +1,5 @@
 import './List.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UserService } from '../../userService';
 
 
@@ -33,7 +33,10 @@ function List() {
         }
     }
 
-    getData();
+    useEffect(() => {
+        getData();
+    })
+
 
     function handleNameChange(e) {
         setUser({ ...user, [e.target.name]: e.target.value })
