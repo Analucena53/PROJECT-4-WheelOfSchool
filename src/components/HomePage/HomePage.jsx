@@ -3,19 +3,19 @@ import './HomePage.css'
 
 function HomePage() {
 
-    const containerRef = useRef(null);
+    // const containerRef = useRef(null);
 
-    useEffect(() => {
+    // useEffect(() => {
     
-        if (containerRef.current) {
-            containerRef.current.classList.add("loaded");
-        }
-        return () => {
-            if (containerRef.current) {
-                containerRef.current.classList.remove("loaded");
-            }
-        };
-    }, []); 
+    //     if (containerRef.current) {
+    //         containerRef.current.classList.add("loaded");
+    //     }
+    //     return () => {
+    //         if (containerRef.current) {
+    //             containerRef.current.classList.remove("loaded");
+    //         }
+    //     };
+    // }, []); 
 
     return (
         
