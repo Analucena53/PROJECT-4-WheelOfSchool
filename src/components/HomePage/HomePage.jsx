@@ -1,4 +1,5 @@
 import './HomePage.css'
+import { Link } from 'react-router-dom';
 
 
 function HomePage() {
@@ -21,6 +22,13 @@ function HomePage() {
         
         <>
         <h2>Holita</h2>
+        <button>
+            <Link to= "/list">List</Link>
+        </button>
+        
+        <Link to= "/wheel"><button>Wheel</button></Link>
+        
+
         {
         /* <div className="container" id="mainContainer">
 
