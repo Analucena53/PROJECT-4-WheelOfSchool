@@ -35,4 +35,4 @@ __pycache__/
 
 #Carpetas donde tengan la información de todas las pruebas en modo de cache
 .pytest_cache/
-node_modules
+node_modules/
