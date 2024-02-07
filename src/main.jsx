@@ -1,13 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Page2View from './View/Page2View'
-import HomePageView from './View/HomePageView'
+// import HomePageView from './View/HomePageView'
+//import ListView from './View/ListView'
+
+import { BrowserRouter } from 'react-router-dom'
+import App from './components/App'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Page2View /> 
-    <HomePageView/>
-  </React.StrictMode>,
-)
+  <BrowserRouter>
+  
+      <App/>
+    {/* <ListView />  */}
+    {/* <HomePageView/> */}
+  </BrowserRouter>
+  )

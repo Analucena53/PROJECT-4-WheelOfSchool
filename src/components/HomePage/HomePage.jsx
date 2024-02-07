@@ -20,7 +20,9 @@ function HomePage() {
     return (
         
         <>
-        <div className="container" id="mainContainer">
+        <h2>Holita</h2>
+        {
+        /* <div className="container" id="mainContainer">
 
             <nav className="navBar">
 
@@ -64,8 +66,8 @@ function HomePage() {
 
             </main>
 
-        </div>
-        </>
+        </div>*/}
+        </> 
     )
 
 }

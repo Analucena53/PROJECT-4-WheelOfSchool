@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './navbar.css'
 function NavBar() {
 
@@ -10,7 +11,9 @@ function NavBar() {
 
           <div className="homeIcon">
             <img className="icon" src="images/home-mobile-ui-svgrepo-com.svg" alt="icon-home" />
-            <h3> <a className="link" href="#">Home</a> </h3>
+            <h3> 
+              <Link to= "/">Home</Link>
+                </h3>
           </div>
 
           <div className="helpIcon">
