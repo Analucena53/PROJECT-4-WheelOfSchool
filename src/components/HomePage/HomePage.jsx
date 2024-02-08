@@ -21,7 +21,7 @@ function HomePage() {
     return (
         
         <>
-        <h2>Holita</h2>
+        <h2>Hola, estás en la Homepage</h2>
         <button>
             <Link to= "/list">List</Link>
         </button>
