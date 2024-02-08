@@ -20,26 +20,26 @@ function NavBar() {
           </div>
           </NavLink>
 
-          <Link to="/list">
-          <div className="listIcon">
+          <NavLink to="/list">
+          <div className="listIcon link">
           <img className="icon" src="images/ballot_7661391.svg" alt="icon-list" />
             <h3>List</h3>
           </div>
-          </Link>
+          </NavLink>
 
-          <Link to="/">
-          <div className="helpIcon">
+          <NavLink to="/">
+          <div className="helpIcon link">
           <img className="icon" src="images/help-circle-svgrepo-com.svg" alt="icon-help" />
             <h3>Help</h3>
           </div>
-          </Link>
+          </NavLink>
           
-          <Link to="/wheel">
-          <div className="wheelIcon">
+          <NavLink to="/wheel">
+          <div className="wheelIcon link">
             <img className="icon" src="images/poker-chip_3915145.svg" alt="icon-wheel" />
             <h3>Wheel</h3>
           </div>
-          </Link>
+          </NavLink>
           
         </div>
       </nav>
