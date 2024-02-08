@@ -6,7 +6,9 @@ nav {
 
 .iconHolder,
 .homeIcon,
-.helpIcon {
+.helpIcon, 
+.listIcon,
+.wheelIcon {
     display: flex;
     align-items: center;
     margin: 5px;
@@ -41,6 +43,11 @@ a {
 }
 
 .link:hover {
+    color: #fa0780;
+    font-size: 24px;
+}
+
+.active{
     color: #fa0780;
     font-size: 24px;
 }

@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar/NavBar'
 import List from '../components/List/List';
 import ButtonForList from '../components/ButtonForList/ButtonForList';
 
-function Page2View(){
+function ListView(){
     return(
         <>
         <NavBar/>
@@ -12,4 +12,4 @@ function Page2View(){
     )
 }
 
-export default Page2View;
+export default ListView;

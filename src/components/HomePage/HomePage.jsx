@@ -1,4 +1,5 @@
 import './HomePage.css'
+import { Link } from 'react-router-dom';
 
 
 function HomePage() {
@@ -20,7 +21,16 @@ function HomePage() {
     return (
         
         <>
-        <div className="container" id="mainContainer">
+        <h2>Hola, estás en la Homepage</h2>
+        <button>
+            <Link to= "/list">List</Link>
+        </button>
+        
+        <Link to= "/wheel"><button>Wheel</button></Link>
+        
+
+        {
+        /* <div className="container" id="mainContainer">
 
             <nav className="navBar">
 
@@ -64,8 +74,8 @@ function HomePage() {
 
             </main>
 
-        </div>
-        </>
+        </div>*/}
+        </> 
     )
 
 }
