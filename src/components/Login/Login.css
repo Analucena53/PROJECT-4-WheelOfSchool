@@ -1,6 +1,6 @@
 .box {
-    width: 200px;
-    height: 200px;
+    width: 235px;
+    height: 235px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -9,21 +9,28 @@
     justify-content: center;
     background-color: #F8DBDC;
     font-family: 'Open Sans', sans-serif;
-    font-size:small;
+    font-size:x-small;
+    padding-bottom: 20px;
+    margin: 0 auto;
   }
   
   .button {
-    width: 100px;
-    height: 30px;
+    width: 125px;
+    height: 35px;
     background-color:#D4E2D4;
     color: rgb(0, 0, 0);
     border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    align-items: center;
+    border:0.5px  solid #6d5f5f;
+    cursor: pointer; 
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 20px;
+     
+    
+   
   }
 
-  .loginUser {
+  .loginForm.button {
     align-items: center;
   }
   input {
@@ -33,4 +40,16 @@
     margin-top: 10px;
     background-color: white;
     font-size: 18px;
+    
+  }
+  .loginForm {
+    display: flex;
+    flex-direction: column; /* Ajusta la dirección del eje principal */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  .loginUser .PasswordUser{
+    margin: 20px;
+  }
+  .PasswordUser{
+    margin-top: 15px;
   }

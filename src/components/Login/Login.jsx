@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./login.css";
+import React from 'react';
+
+
 
 
 function Login() {
@@ -24,6 +27,7 @@ function Login() {
 
   return (
     <>
+    <div className="loginForm">
       <button>
         <Link to="/home">Home</Link>
       </button>
@@ -39,7 +43,7 @@ function Login() {
               onChange={handleUserChange}
             />
           </div>
-          <div>
+          <div className="PasswordUser">
             <label htmlFor="password">Contraseña:</label>
             <input
               type="password"
@@ -49,13 +53,14 @@ function Login() {
               onChange={handlePasswordChange}
             />
           </div>
-         
+          <button type="submit" className="button">
+            Enviar
+          </button>
         </form> 
         
       </div>
-      <button type="submit" className="button">
-            Enviar
-          </button>
+     
+          </div>
     </>
   );
 }
