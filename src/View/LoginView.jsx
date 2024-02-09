@@ -13,3 +13,4 @@ function LoginView(){
 }
 
 export default LoginView;
+export function changeOpacity() { }

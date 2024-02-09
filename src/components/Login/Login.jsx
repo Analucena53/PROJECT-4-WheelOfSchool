@@ -25,44 +25,45 @@ function Login() {
     setPassword(event.target.value);
   }
 
-  return (
-    <>
-    <div className="loginForm">
-      <button>
-        <Link to="/home">Home</Link>
-      </button>
-      <div className="box">
-        <form onSubmit={handleSubmit}>
-          <div className="loginUser">
-            <label htmlFor="user">Usuario:</label>
-            <input
-              type="text"
-              id="user"
-              name="user"
-              value={user}
-              onChange={handleUserChange}
-            />
-          </div>
-          <div className="PasswordUser">
-            <label htmlFor="password">Contraseña:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-          </div>
-          <button type="submit" className="button">
-            Enviar
-          </button>
-        </form> 
-        
-      </div>
-     
-          </div>
-    </>
-  );
-}
+  import React from 'react';
+  import { Link } from 'react-router-dom'; // Asegúrate de importar Link desde react-router-dom
 
-export default Login;
+  function LoginForm({ handleSubmit, user, handleUserChange, password, handlePasswordChange }) {
+    return (
+      <>
+        <div className="loginForm">
+          <div className="box">
+            <form onSubmit={handleSubmit}>
+              <div className="loginUser">
+                <label htmlFor="user">Usuario:</label>
+                <input
+                  type="text"
+                  id="user"
+                  name="user"
+                  value={user}
+                  onChange={handleUserChange}
+                />
+              </div>
+              <div className="PasswordUser">
+                <label htmlFor="password">Contraseña:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                />
+              </div>
+              <button className="buttonLogin">
+                <Link to="/home">Enviar</Link>
+              </button>
+            </form>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  export default LoginForm;
+
+  export default Login;
