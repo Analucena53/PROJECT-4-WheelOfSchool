@@ -1,0 +1,17 @@
+.homePageHolder {
+        height: 100vh;
+        background-image: url("images/background.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0;
+        transition: opacity 3s ease-in-out;
+   
+}
+
+@media (max-width: 700px) {
+    .homePageHolder {
+        height: auto;
+}
+}
+

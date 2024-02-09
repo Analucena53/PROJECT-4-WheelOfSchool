@@ -1,11 +1,16 @@
-import HomePage from '../components/HomePage/HomePage';
+import HomePageBtn from '../components/ButtonForList/HomePageBtn';
 import NavBar from '../components/NavBar/NavBar';
+import Title from '../components/Title/Title'
+import './HomePageView.css'
 
 function HomePageView(){
     return(
         <>
+        <div className='homePageHolder'>
         <NavBar/>
-        <HomePage/>
+        <Title/>
+        <HomePageBtn/>
+        </div>
         </>
     )
 }
