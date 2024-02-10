@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { UserService } from '../../userService';
+import Swal from 'sweetalert2';
 
 function Wheel() {
   const [users, setUsers] = useState([]);
@@ -16,12 +17,76 @@ function Wheel() {
       };
 
       fetchUsers();
-  }, []);
 
+    }, []);
+    
+    // Participantes
+    const [doomList, setDoomList] = useState([]);
+    
+      // Manejador del evento onClick para el botón
+      const handleAddButton = (user) => {
+        setDoomList((prevDoomList) => {
+          // Verificar si el objeto ya existe en doomList
+          const existingUser = prevDoomList.find((item) => item.id === user.id);
+      
+          // Solo agregar el objeto si no existe en doomList
+          if (!existingUser) {
+            return [
+              ...prevDoomList,
+              {
+                id: user.id,
+                name: user.userName,
+                surname: user.userSurname
+              }
+            ];
+          } else {
+            // Si el objeto ya existe, mostrar un mensaje de alerta
+            Swal.fire({
+              title: "Error",
+              text: `${user.userName} ya está en la lista.`,
+              icon: "error"
+            });
+            return prevDoomList;
+          }
+        });
+      };
+      
+      
+      console.log(doomList);
+
+      // Quitar participante
+  
+  
 
   return (
     <>
+      <table id="tableUsers">
+        <tbody>
+          {users.map((user, index) => (
+            <tr key={index}>
+              <td>{user.userName} {user.userSurname}</td>
+              <td>
+                <button onClick={() => handleAddButton(user)}>+</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
+      <table id="tableDoomed">
+        <thead>
+          <tr>
+            <th>A la hoguera</th>
+          </tr>
+        </thead>
+        <tbody>
+          {doomList.map((user, index) => (
+            <tr key={index}>
+              <td>{user.name} {user.surname}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <ul className="circle">
         <li>
           <section className='text'>1</section>
