@@ -9,6 +9,46 @@
       "userCourse": "Intermedio",
       "userClass": "Flamenco",
       "userEmail": "segsg@c.com"
+    },
+    {
+      "id": "239b",
+      "userName": "Uno",
+      "userSurname": "Uno",
+      "userSecondSurname": "Uno",
+      "userRol": "Estudiante",
+      "userCourse": "Básico",
+      "userClass": "Flamenco",
+      "userEmail": "uno@uno.com"
+    },
+    {
+      "id": "0b13",
+      "userName": "Dos",
+      "userSurname": "Dos",
+      "userSecondSurname": "Dos",
+      "userRol": "Docente",
+      "userCourse": "-",
+      "userClass": "Ballet",
+      "userEmail": "dos@dos.com"
+    },
+    {
+      "id": "d429",
+      "userName": "Tres",
+      "userSurname": "Tres",
+      "userSecondSurname": "Tres",
+      "userRol": "Estudiante",
+      "userCourse": "Básico",
+      "userClass": "Flamenco",
+      "userEmail": "tres@tres.com"
+    },
+    {
+      "id": "0f02",
+      "userName": "Cuatro",
+      "userSurname": "Cuatro",
+      "userSecondSurname": "Cuatro",
+      "userRol": "Estudiante",
+      "userCourse": "Intermedio",
+      "userClass": "Hip Hop",
+      "userEmail": "cuatro@cuatro.com"
     }
   ]
 }
