@@ -23,7 +23,7 @@ function Wheel() {
     // Participantes
     const [doomList, setDoomList] = useState([]);
     
-      // Manejador del evento onClick para el botón
+      // Agregar participante
       const handleAddButton = (user) => {
         setDoomList((prevDoomList) => {
           // Verificar si el objeto ya existe en doomList
@@ -55,7 +55,11 @@ function Wheel() {
       console.log(doomList);
 
       // Quitar participante
-  
+      const handleRemoveButton = (user) => {
+        setDoomList((prevDoomList) => {
+          return prevDoomList.filter((item) => item.id !== user.id);
+        });
+      }
   
 
   return (
@@ -76,13 +80,14 @@ function Wheel() {
       <table id="tableDoomed">
         <thead>
           <tr>
-            <th>A la hoguera</th>
+            <th colSpan={2}>A la hoguera</th>
           </tr>
         </thead>
         <tbody>
-          {doomList.map((user, index) => (
+          {doomList.map((doomed, index) => (
             <tr key={index}>
-              <td>{user.name} {user.surname}</td>
+              <td>{doomed.name} {doomed.surname}</td>
+              <td><button onClick={() => handleRemoveButton(doomed)}>-</button></td>
             </tr>
           ))}
         </tbody>

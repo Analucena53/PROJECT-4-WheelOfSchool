@@ -49,6 +49,16 @@
       "userCourse": "Intermedio",
       "userClass": "Hip Hop",
       "userEmail": "cuatro@cuatro.com"
+    },
+    {
+      "id": "1206",
+      "userName": "Cinco",
+      "userSurname": "Cinco",
+      "userSecondSurname": "Cinco",
+      "userRol": "Estudiante",
+      "userCourse": "Avanzado",
+      "userClass": "Hip Hop",
+      "userEmail": "cinco@cinco.com"
     }
   ]
 }
