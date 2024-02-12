@@ -11,12 +11,12 @@ function HomePageBtn() {
 
 
                 <button className="btn" id='accesList'>
-                    <Link to="/list"> Acceso a Listas</Link>
+                    <Link to="/list">Listas</Link>
                 </button>
 
 
                 <button className="btn" id='wheel'>
-                    <Link to="/wheel"> Wheel</Link>
+                    <Link to="/wheel">Ruleta</Link>
                 </button>
 
             </div>
