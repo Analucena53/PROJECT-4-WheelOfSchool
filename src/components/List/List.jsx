@@ -1,6 +1,7 @@
 import './List.css'
 import { useEffect, useState } from "react";
 import { UserService } from '../../userService';
+import Validar from './validation';
 
 
 function List() {
@@ -47,44 +48,53 @@ function List() {
     }
 
     async function sendData() {
-
-        if (!user.userName ||
-            !user.userSurname ||
-            !user.userSecondSurname ||
-            !user.userRol ||
-            !user.userCourse ||
-            !user.userClass ||
-            !user.userEmail) {
-            alert('Rellene todos los campos obligatorios');
-            return;
-        }
-        try {
-
-            if (editingUser) {
-
-                await UserService.editUser(editingUser.id, user);
-                setEditingUser(null);
-            } else {
-
-                let newUsers = await UserService.submitUser({ ...user });
-                setUserList((prevUsers) => [...prevUsers, newUsers]);
-
-            }
-            setUser({
-                userName: '',
-                userSurname: '',
-                userSecondSurname: '',
-                userRol: '',
-                userCourse: '',
-                userClass: '',
-                userEmail: '',
-            });
-
-        } catch (error) {
-            console.error("Error submitting/editing user:", error);
-           alert("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
-            return;
-        }
+        
+        let flag = Validar(user);
+       
+if (!flag){
+    alert('Rellene todos los campos obligatorios');
+    return;
+}
+ else {
+     //if (!flag){return;}
+         // if (!user.userName ||
+         //     !user.userSurname ||
+         //     !user.userSecondSurname ||
+         //     !user.userRol ||
+         //     !user.userCourse ||
+         //     !user.userClass ||
+         //     !user.userEmail) {
+         //     alert('Rellene todos los campos obligatorios');
+             // return;
+         //}
+         try {
+ 
+             if (editingUser) {
+ 
+                 await UserService.editUser(editingUser.id, user);
+                 setEditingUser(null);
+             } else {
+ 
+                 let newUsers = await UserService.submitUser({ ...user });
+                 setUserList((prevUsers) => [...prevUsers, newUsers]);
+ 
+             }
+             setUser({
+                 userName: '',
+                 userSurname: '',
+                 userSecondSurname: '',
+                 userRol: '',
+                 userCourse: '',
+                 userClass: '',
+                 userEmail: '',
+             });
+ 
+         } catch (error) {
+             console.error("Error submitting/editing user:", error);
+            alert("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
+             return;
+         }
+ }
 
     }
 
