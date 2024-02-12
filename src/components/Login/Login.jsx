@@ -9,7 +9,6 @@ function Login() {
         <button>
             <Link to= "/home">Home</Link>
         </button>
-       
         </>
     )
 }
