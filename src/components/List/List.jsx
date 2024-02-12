@@ -52,21 +52,10 @@ function List() {
         let flag = Validar(user);
        
 if (!flag){
-    alert('Rellene todos los campos obligatorios');
+    console.log('Validation error: fill in all fields, spelling is not correct');
     return;
 }
  else {
-     //if (!flag){return;}
-         // if (!user.userName ||
-         //     !user.userSurname ||
-         //     !user.userSecondSurname ||
-         //     !user.userRol ||
-         //     !user.userCourse ||
-         //     !user.userClass ||
-         //     !user.userEmail) {
-         //     alert('Rellene todos los campos obligatorios');
-             // return;
-         //}
          try {
  
              if (editingUser) {
