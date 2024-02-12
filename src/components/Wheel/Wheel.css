@@ -1,0 +1,143 @@
+/* *:not(.navBar):not([class^='swal2-']) {
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+#wheelComponent {
+    background-color: #FAF3F0;
+}
+
+#wheelComponent {
+    display: flex;
+}
+
+#tables {
+    width: 60%;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#tableUsers,
+#tableDoomed {
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tableUsers thead tr th,
+#tableDoomed thead tr th {
+    /* border-radius: 20px 20px 0 0; */
+    text-transform: uppercase;
+}
+
+/* #tableUsers tbody tr:last-child td:first-child,
+#tableDoomed tbody tr:last-child td:last-child {
+    border-radius: 0 0 20px 0;
+} */
+
+/* #tableDoomed tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 20px;
+} */
+
+#tableUsers thead tr th {
+    background-color: #d4e2d4;
+}
+
+#tableUsers tbody tr:nth-child(2n+1) {
+    background-color: #FFF;
+}
+
+#tableDoomed tbody {
+    display: block;
+    height: auto;
+    min-height:  200px;
+    background-color: #f8dbdc;
+}
+
+#tableDoomed tbody td {
+    background-color: #f8dbdc;
+}
+
+.roulette {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roulette button {
+    width: fit-content;
+}
+
+@media screen and (max-width: 1300px) {
+    canvas {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #wheelComponent {
+        flex-direction: column;
+    }
+
+    #tables,
+    .roulette {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    canvas {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #tables {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    canvas {
+        width: 500px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    canvas {
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 420px) {
+    canvas {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    canvas {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    canvas {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    canvas {
+        width: 200px;
+    }
+}
