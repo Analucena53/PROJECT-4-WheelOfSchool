@@ -24,8 +24,8 @@
   margin: 0 auto;
   margin-top: 20px;
   align-items: center;
-  margin: 20px auto 0; /* Alinea el botón verticalmente */
-  display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+  margin: 20px auto 0; 
+  display: block; 
 }
 
 .loginForm .buttonLogin {

@@ -1,4 +1,11 @@
-body{
+.login-view {
+    background-image: url('public/images/background.svg');
     background-color: #FAF3F0;
-   margin-top: 180px;
-}
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

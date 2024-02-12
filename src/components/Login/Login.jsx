@@ -1,15 +1,10 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./login.css";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    alert(`Usuario: ${user}, Contraseña: ${password}`);
-  }
 
   function handleUserChange(event) {
     setUser(event.target.value);
@@ -21,7 +16,6 @@ function Login() {
 
   return (
     <LoginForm
-      handleSubmit={handleSubmit}
       user={user}
       handleUserChange={handleUserChange}
       password={password}
@@ -30,12 +24,12 @@ function Login() {
   );
 }
 
-function LoginForm({ handleSubmit, user, handleUserChange, password, handlePasswordChange }) {
+function LoginForm({ user, handleUserChange, password, handlePasswordChange }) {
   return (
     <>
       <div className="loginForm">
         <div className="box">
-          <form onSubmit={handleSubmit}>
+          <form>
             <div className="loginUser">
               <label htmlFor="user">Usuario:</label>
               <input
@@ -56,9 +50,11 @@ function LoginForm({ handleSubmit, user, handleUserChange, password, handlePassw
                 onChange={handlePasswordChange}
               />
             </div>
-            <button className="buttonLogin">
-              <Link to="/home">Enviar</Link>
-            </button>
+            <Link to="/Home">
+              <button className="buttonLogin" type="button">
+                Enviar
+              </button>
+            </Link>
           </form>
         </div>
       </div>
