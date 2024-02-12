@@ -2,6 +2,8 @@ import './List.css'
 import { useEffect, useState } from "react";
 import { UserService } from '../../userService';
 import Validar from './validation';
+import Swal from 'sweetalert2';
+import './alert.css'
 
 
 function List() {
@@ -29,7 +31,11 @@ function List() {
             setUserList(users);
         } catch (error) {
             console.error("Error fetching users:", error);
-            alert ("Error al recibir usuarios. Por favor, inténtelo de nuevo.");
+            Swal.fire({
+                imageUrl: '../public/images/iconoError.svg',
+                title: 'ERROR',
+                text: "Error al recibir usuarios. Por favor, inténtelo de nuevo.",
+            });
             return;
         }
     }
@@ -48,42 +54,46 @@ function List() {
     }
 
     async function sendData() {
-        
+
         let flag = Validar(user);
-       
-if (!flag){
-    console.log('Validation error: fill in all fields, spelling is not correct');
-    return;
-}
- else {
-         try {
- 
-             if (editingUser) {
- 
-                 await UserService.editUser(editingUser.id, user);
-                 setEditingUser(null);
-             } else {
- 
-                 let newUsers = await UserService.submitUser({ ...user });
-                 setUserList((prevUsers) => [...prevUsers, newUsers]);
- 
-             }
-             setUser({
-                 userName: '',
-                 userSurname: '',
-                 userSecondSurname: '',
-                 userRol: '',
-                 userCourse: '',
-                 userClass: '',
-                 userEmail: '',
-             });
- 
-         } catch (error) {
-             console.error("Error submitting/editing user:", error);
-            alert("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
-             return;
-         }
- }
+
+        if (!flag) {
+            console.log('Validation error: fill in all fields, spelling is not correct');
+            return;
+        }
+        else {
+            try {
+
+                if (editingUser) {
+
+                    await UserService.editUser(editingUser.id, user);
+                    setEditingUser(null);
+                } else {
+
+                    let newUsers = await UserService.submitUser({ ...user });
+                    setUserList((prevUsers) => [...prevUsers, newUsers]);
+
+                }
+                setUser({
+                    userName: '',
+                    userSurname: '',
+                    userSecondSurname: '',
+                    userRol: '',
+                    userCourse: '',
+                    userClass: '',
+                    userEmail: '',
+                });
+
+            } catch (error) {
+                console.error("Error submitting/editing user:", error);
+                Swal.fire({
+                    imageUrl: '../public/images/iconoError.svg',
+                    title: 'ERROR',
+                    text: "Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.",
+                });
+                return;
+            }
+        }
 
     }
 
@@ -100,16 +110,20 @@ if (!flag){
         setEditingUser(selectedUser);
     }
 
-    
+
     async function deleteUser(id) {
-        
+
         try {
             await UserService.deleteUser(id);
-        getData();
+            getData();
 
         } catch (error) {
             console.error("Error fetching users:", error);
-            alert ("Error al eliminar usuarios. Por favor, inténtelo de nuevo.");
+            Swal.fire({
+                imageUrl: '../public/images/iconoError.svg',
+                title: 'ERROR',
+                text: "Error al eliminar usuarios. Por favor, inténtelo de nuevo.",
+            });
         }
     }
 

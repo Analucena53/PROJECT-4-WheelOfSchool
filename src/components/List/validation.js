@@ -32,7 +32,7 @@ function Validar(user) {
         Swal.fire({
             imageUrl: '../public/images/iconoError.svg',
             title: 'Oops...',
-            text: 'Formato de nombre incorrecto. El nombre y los apellidos deben contener sólo minúsculas y mayúsculas',
+            text: 'Formato de nombre incorrecto. El nombre y los apellidos deben contener sólo minúsculas y/o mayúsculas',
         });
         return false;
     } else {
