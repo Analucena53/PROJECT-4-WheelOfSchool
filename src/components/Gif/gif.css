@@ -26,6 +26,7 @@ strong{ color:#fa0780 ;}
     .img-lola{
         width: 300px;
         height: 200px; 
+        border-radius: 70px;
     }
 }
 
