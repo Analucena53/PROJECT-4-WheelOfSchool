@@ -47,7 +47,7 @@ function Wheel() {
           Swal.fire({
             title: "Error",
             text: `${user.userName} ya está en la lista.`,
-            icon: "error"
+            imageUrl: "public/images/iconoError.svg"
           });
           return prevDoomList;
         }
@@ -77,7 +77,7 @@ function Wheel() {
       return "#FFFFFF"; // White color
     } else {
       // Return green for odd indices
-      return "#00FF00"; // Green color
+      return "#D4E2D4"; // Light green color
     }
   }
 
@@ -85,7 +85,6 @@ function Wheel() {
   const canvas = canvasRef.current;
 
   useEffect(() => {
-    
     
     if (canvas) {
       const ctx = canvas.getContext('2d');
@@ -210,40 +209,47 @@ function Wheel() {
 
   return (
     <>
-    <section id="tables">
-        <table id="tableUsers">
-          <tbody>
-            {users.map((user, index) => (
-              <tr key={index}>
-                <td>{user.userName} {user.userSurname}</td>
-                <td>
-                  <button onClick={() => handleAddButton(user)}>+</button>
-                </td>
+    <section id="wheelComponent">
+      <section id="tables">
+          <table id="tableUsers">
+            <thead>
+              <tr>
+              <th colSpan={2}>Alumnado</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {users.map((user, index) => (
+                <tr key={index}>
+                  <td>{user.userName} {user.userSurname}</td>
+                  <td>
+                    <button onClick={() => handleAddButton(user)}>+</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-        <table id="tableDoomed">
-          <thead>
-            <tr>
-              <th colSpan={2}>A la hoguera</th>
-            </tr>
-          </thead>
-          <tbody>
-            {doomList.map((doomed, index) => (
-              <tr key={index}>
-                <td>{doomed.name} {doomed.surname}</td>
-                <td><button onClick={() => handleRemoveButton(doomed)}>-</button></td>
+          <table id="tableDoomed">
+            <thead>
+              <tr>
+                <th colSpan={2}>Participantes</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </section> 
+            </thead>
+            <tbody>
+              {doomList.map((doomed, index) => (
+                <tr key={index}>
+                  <td>{doomed.name} {doomed.surname}</td>
+                  <td><button onClick={() => handleRemoveButton(doomed)}>-</button></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section> 
 
-      <section className="roulette">
-        <canvas ref={canvasRef}></canvas>
-        <button id="spin" onClick={spin}>Girar</button>
+        <section className="roulette">
+          <canvas ref={canvasRef}></canvas>
+          <button id="spin" onClick={spin} className='btn'>Girar</button>
+        </section>
       </section>
     </>
   )

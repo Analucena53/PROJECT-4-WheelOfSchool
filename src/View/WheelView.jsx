@@ -8,8 +8,6 @@ function WheelView() {
   return (
     <>
         <Navbar />
-
-        <h1>Aplicación con Ruleta</h1>
         <Wheel />
     </>
   );
