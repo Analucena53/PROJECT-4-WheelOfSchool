@@ -33,6 +33,9 @@
     background-color: white;
     font-size: 18px;
 }
+#rol, #level, #danceClass {
+    height: 39px;
+}
 
 #send-button-container {
     display: flex;
