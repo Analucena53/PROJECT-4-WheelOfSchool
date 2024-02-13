@@ -29,6 +29,7 @@
     cursor: pointer;
     box-shadow: 0 0 10px #bb175bc2;
     transition: background-color 0.2s, transform 0.2s ease-in-out;
+    text-align: center;
 }
 
 .btn:hover {

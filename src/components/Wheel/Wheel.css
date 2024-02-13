@@ -65,7 +65,8 @@ td {
 }
 
 #tableDoomed #btnRemove {
-    background-image: url('/public/images/delete-icon.svg');
+    background-image: url('../../../public/images/delete-icon.svg');
+    background-color: transparent;
     width: 25px;
     height: 25px;
 }

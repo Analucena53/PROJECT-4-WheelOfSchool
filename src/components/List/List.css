@@ -106,10 +106,12 @@ p {
 
 #editBtn {
     background-image: url("/public/images/edit-icon.svg");
+    background-color: transparent;
 }
 
 #deleteBtn {
     background-image: url("/public/images/delete-icon.svg");
+    background-color: transparent;
 }
 
 

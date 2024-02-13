@@ -2,10 +2,10 @@ import Swal from 'sweetalert2';
 import './alert.css'
 
 function Validar(user) {
-    const validateEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const validateEmail = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+[\w.-]*[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+@[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+\.[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+$/;
     const resultEmail = validateEmail.test(user.userEmail);
 
-    const validateName = /^[A-Za-z]+$/;
+    const validateName = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/;
     const resultName = validateName.test(user.userName + user.userSurname + user.userSecondSurname);
 
     if (!user.userName ||

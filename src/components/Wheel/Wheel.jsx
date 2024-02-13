@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { UserService } from '../../userService';
 import Swal from 'sweetalert2';
 import './Wheel.css'
-// import '../List/alert.css'
+import '../List/alert.css'
 
 function Wheel() {
   const [users, setUsers] = useState([]);
@@ -106,7 +106,7 @@ function Wheel() {
 
       ctx.strokeStyle = "transparent";
 
-      ctx.font = 'bold 12px Helvetica, Arial';
+      ctx.font = 'bold 16px Open Sans, Arial';
 
       for(let i =  0; i < doomList.length; i++) {
         let angle = startAngle + i * arc;
@@ -199,6 +199,15 @@ function Wheel() {
     let text = `${userName} ${userSurname}`;
     ctx.fillText(text,  250 - ctx.measureText(text).width /  2,  250 +  10);
     ctx.restore();
+
+    Swal.fire({
+      title: `${userName} ${userSurname}`,
+      text: "Te tocó",
+      imageUrl: "public/images/silueta-de-mujer-bailaora-de-flamenco.png",
+      imageWidth: 100,
+      imageHeight: 100,
+      imageAlt: "Bailaora"
+    });
   }
   
 
