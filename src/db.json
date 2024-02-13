@@ -1,14 +1,64 @@
 {
   "users": [
     {
-      "id": "aca0",
-      "userName": "Gata",
-      "userSurname": "Bila",
-      "userSecondSurname": "cnxn",
-      "userRol": "Docente",
-      "userCourse": "Intermedio",
+      "userName": "Antonio",
+      "userSurname": "Fernández",
+      "userSecondSurname": "Rodríguez",
+      "userRol": "Estudiante",
+      "userCourse": "Básico",
       "userClass": "Flamenco",
-      "userEmail": "segsg@c.com"
+      "userEmail": "antfer@yo.com",
+      "id": "a60a"
+    },
+    {
+      "userName": "Lidia",
+      "userSurname": "Pérez",
+      "userSecondSurname": "García",
+      "userRol": "Docente",
+      "userCourse": "Avanzado",
+      "userClass": "Hip Hop",
+      "userEmail": "lidiapg@gmail.com",
+      "id": "0a46"
+    },
+    {
+      "id": "631b",
+      "userName": "Ana",
+      "userSurname": "Lucena",
+      "userSecondSurname": "Puertas",
+      "userRol": "PAS",
+      "userCourse": "Avanzado",
+      "userClass": "Ballet",
+      "userEmail": "anitadinamita@hot.com"
+    },
+    {
+      "userName": "Ángela",
+      "userSurname": "Machado",
+      "userSecondSurname": "Sánchez",
+      "userRol": "Docente",
+      "userCourse": "Avanzado",
+      "userClass": "Flamenco",
+      "userEmail": "angy@gmail.com",
+      "id": "33ec"
+    },
+    {
+      "id": "5462",
+      "userName": "Pilar",
+      "userSurname": "Sedeño",
+      "userSecondSurname": "Durán",
+      "userRol": "PAS",
+      "userCourse": "Avanzado",
+      "userClass": "Hip Hop",
+      "userEmail": "pilysed@gmail.com"
+    },
+    {
+      "id": "6940",
+      "userName": "Caño",
+      "userSurname": "Cañas",
+      "userSecondSurname": "Cañero",
+      "userRol": "Estudiante",
+      "userCourse": "Avanzado",
+      "userClass": "Ballet",
+      "userEmail": "caño@vk.es"
     }
   ]
 }

@@ -1,12 +1,16 @@
+/*/////////////////--ListBtn--//////////////////*/
 #loardListsText {
-   text-align: center;
+    text-align: center;
 }
+
 #selectButtonList optgroup {
     text-align: left;
 }
+
 #loadlistbutton {
     margin-left: 75px;
 }
+
 .listButton {
     display: flex;
     justify-content: end;
@@ -14,7 +18,7 @@
     padding: auto;
 }
 
-.btn  {
+.btn {
     background-color: #D4E2D4;
     border-radius: 20px;
     font-size: 16px;
@@ -25,6 +29,7 @@
     cursor: pointer;
     box-shadow: 0 0 10px #bb175bc2;
     transition: background-color 0.2s, transform 0.2s ease-in-out;
+    text-align: center;
 }
 
 .btn:hover {
@@ -33,23 +38,46 @@
     transform: scale(1.1);
 
 }
+/*//////////////--HomePageBtn////////////////////////*/
+.btnHolder {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+#accesList {
+    margin-right: 20vh;
+}
+
+
 @media screen and (max-width: 932px) {
-    
+
     .listButton {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: auto;
-        
-    
 
-}  
+    }
+ 
 }
-@media screen and (max-width: 532px){
 
-    .saveListButton, .selectButtonList {
+@media screen and (max-width: 532px) {
+
+    .saveListButton,
+    .selectButtonList {
+
+        width: 120px;
+        height: 40px;
+    }
+    .btnHolder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin:0px; */
+    }
     
-    width: 120px;
-    height: 40px;
-} 
+    #accesList {
+        margin-right: 20px;
+    }
 }

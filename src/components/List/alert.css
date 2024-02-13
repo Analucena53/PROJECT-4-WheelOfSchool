@@ -1,0 +1,37 @@
+.swal2-popup {
+    background-color: #FAF3F0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bb175bc2;
+}
+
+button:where(.swal2-styled).swal2-confirm {
+    background-color:#D4E2D4 !important;
+    box-shadow: 0 0 10px #bb175bc2 !important;
+}
+
+img:where(.swal2-image){
+    height: 70px;
+}
+
+/* Estilo básico de la imagen o elemento */
+.swal2-image { /* Ajusta la ruta y estilos de fondo según sea necesario */
+    animation: rotate 4s infinte infinite ;
+}
+  
+  /* Definición de la animación */
+  @keyframes rotate {
+    0%{
+      transform: rotateY(0deg); /* Ángulo de inicio (0 grados) */
+    }
+    50% {
+      transform: rotateY(180deg); /* Ángulo final (360 grados para una rotación completa) */
+    }
+    100%{
+        transform: rotateY(0deg); /* Ángulo de inicio (0 grados) */
+      }
+  }
+  
+  /* Aplicación de la animación a la clase deseada */
+  .swal2-image {
+    animation: rotate 2s infinite linear; /* 2s de duración, rotación infinita, animación lineal */
+  }

@@ -1,12 +1,14 @@
 nav {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .iconHolder,
 .homeIcon,
-.helpIcon, 
+.helpIcon,
 .listIcon,
 .wheelIcon {
     display: flex;
@@ -15,9 +17,11 @@ nav {
 }
 
 #logo {
-    width: 120px;
-    height: auto;
-    margin: 5px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50px;
+    top: 20px;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -42,12 +46,116 @@ a {
     transition: color 0.3s, font-size 0.3s;
 }
 
-.link:hover {
+.burger {
+    padding: 20px;
+}
+
+.link:hover, .active {
     color: #fa0780;
     font-size: 24px;
 }
 
-.active{
-    color: #fa0780;
-    font-size: 24px;
+.menuOpen .link:not(.active):hover  {
+    color: none;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 520px) {
+
+    .navBar {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .overlay {
+        display: none;
+        /* Ocultar inicialmente el fondo de superposición */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* Fondo semi-transparente */
+        transition: opacity 0.5s ease;
+        /* Transición de opacidad */
+    }
+
+    .iconHolder {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        transition: max-height 0.5s ease;
+        position: fixed;
+        top: 60px;
+        background-color: #F8DBDC;
+        border-radius: 20px;
+        width: 150px;
+        z-index: 2;
+    }
+
+    .link {
+        font-size: 20px;
+    }
+
+
+    .menuOpen .iconHolder {
+        display: flex;
+        /* Mostrar iconHolder cuando el menú está abierto */
+
+    }
+
+    .menuOpen .overlay {
+        display: block;
+        /* Mostrar el fondo de superposición cuando el menú está abierto */
+    }
+
+    #logo {
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        left: 20px;
+    }
+
+    .icon {
+        width: 24px;
+    }
+
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .menuOpen .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 7px);
+        background-color: #fa0780;
+    }
+
+    .menuOpen .bar:nth-child(2) {
+        opacity: 0;
+        background-color: #fa0780;
+    }
+
+    .menuOpen .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -7px);
+        background-color: #fa0780;
+    }
+
+   
+}
+
+@media screen and (max-width: 580px) {
+    #logo {
+        left: 20px;
+    }
 }

@@ -20,7 +20,9 @@
 
 #first-lastname,
 #second-lastname {
-    max-width: 130px
+    width: 96%;
+    margin: 2px;
+    margin-top: 10px;
 }
 
 .input {
@@ -32,6 +34,12 @@
     font-size: 18px;
 }
 
+#rol,
+#level,
+#danceClass {
+    height: 39px;
+}
+
 #send-button-container {
     display: flex;
     justify-content: center;
@@ -39,7 +47,7 @@
 
 .formTableHolder {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 310px 1fr;
     gap: 20px;
 }
 
@@ -74,7 +82,7 @@ table {
     width: 100%;
 }
 
-p{
+p {
     color: #8d8585;
     font-style: italic;
     text-align: justify;
@@ -98,10 +106,12 @@ p{
 
 #editBtn {
     background-image: url("/public/images/edit-icon.svg");
+    background-color: transparent;
 }
 
 #deleteBtn {
     background-image: url("/public/images/delete-icon.svg");
+    background-color: transparent;
 }
 
 
@@ -118,10 +128,6 @@ p{
         margin: 0 20%;
     }
 
-    #first-lastname,
-    #second-lastname {
-        max-width: 100%;
-    }
 }
 
 @media screen and (max-width: 650px) {
@@ -130,8 +136,11 @@ p{
         margin: 5px;
     }
 
-    #first-lastname,
-    #second-lastname {
-        max-width: 160px
+}
+
+@media screen and (max-width: 350px) {
+    .double-column {
+        display: flex;
+        flex-direction: column;
     }
 }
