@@ -1,0 +1,35 @@
+
+body{ 
+    background-color: #FAF3F0;
+    font-family:'Open Sans', sans-serif;
+}
+
+.gif-container, .img-lola {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img-lola{ border-radius: 120px;}
+
+.ul-lola{ 
+    margin-right:30px;
+    list-style: none;
+}
+
+strong{ color:#fa0780 ;}
+
+.text-lola, .email-lola, .tlf-lola{ font-size: 20px;}
+
+
+@media screen and (max-width: 515px) {
+    .img-lola{
+        width: 300px;
+        height: 200px; 
+        border-radius: 70px;
+    }
+}
+
+@media screen and (max-width: 970px){
+    h2{padding: 30px;}
+}

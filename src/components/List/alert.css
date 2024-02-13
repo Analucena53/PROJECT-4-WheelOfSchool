@@ -1,0 +1,14 @@
+.swal2-popup {
+    background-color: #FAF3F0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bb175bc2;
+}
+
+button:where(.swal2-styled).swal2-confirm {
+    background-color:#D4E2D4 !important;
+    box-shadow: 0 0 10px #bb175bc2 !important;
+}
+
+img:where(.swal2-image){
+    height: 70px;
+}
