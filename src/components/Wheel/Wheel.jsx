@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { UserService } from '../../userService';
 import Swal from 'sweetalert2';
 import './Wheel.css'
+// import '../List/alert.css'
 
 function Wheel() {
   const [users, setUsers] = useState([]);
@@ -47,7 +48,7 @@ function Wheel() {
           Swal.fire({
             title: "Error",
             text: `${user.userName} ya está en la lista.`,
-            imageUrl: "public/images/iconoError.svg"
+            imageUrl: "../../public/images/iconoError.svg",
           });
           return prevDoomList;
         }
@@ -222,7 +223,7 @@ function Wheel() {
                 <tr key={index}>
                   <td>{user.userName} {user.userSurname}</td>
                   <td>
-                    <button onClick={() => handleAddButton(user)}>+</button>
+                    <button onClick={() => handleAddButton(user)} id="btnAdd" className='edDelBtn'></button>
                   </td>
                 </tr>
               ))}
@@ -239,7 +240,7 @@ function Wheel() {
               {doomList.map((doomed, index) => (
                 <tr key={index}>
                   <td>{doomed.name} {doomed.surname}</td>
-                  <td><button onClick={() => handleRemoveButton(doomed)}>-</button></td>
+                  <td><button onClick={() => handleRemoveButton(doomed)} id="btnRemove" className='edDelBtn'></button></td>
                 </tr>
               ))}
             </tbody>
