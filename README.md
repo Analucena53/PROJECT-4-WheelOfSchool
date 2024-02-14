@@ -25,16 +25,14 @@ en los pasillos o qué profesor acompaña a los alumnos en una excursión.
 - **Validación del formulario del registro:** para entrar en la página home el usuario debe que rellenar todos los campos. 
 
 **Vista Home:**
-- Desarrolla una vista principal desde la cual se pueda acceder a los distintos servicios de la aplicación. Puede navegar entre las distintas vistas a través
-- de la barra de navegación o usar botones para moverse a la página lista o sorteo.
+- Desarrolla una vista principal desde la cual se pueda acceder a los distintos servicios de la aplicación. Puede navegar entre las distintas vistas a través de la barra de navegación o usar botones para moverse a la página lista o sorteo.
 - La página en la que el usuario está se marca en el navegador para una mejor navegación.
 
 **Vista de Listas:**
 - **Formulario:** Permite rellenar los datos de cada persona, generando una lista o tabla, guardar los datos en la Base de datos.
 - **Lista:** Aparecerán los datos que hemos rellenado en el formulario.
 - **Editar y borrar datos:** Los datos de la tabla pueden editarse y borrarse según sea necesario.
-- **Validación del formulario:** si el usuario no rellena todos los campos obligatorios del formulario, o los rellena de forma incorecta,
--  los datos no se enviarán y el usuario recibirá una notificación de alerta sobre la necesidad de rellenar los campos obligatorios. 
+- **Validación del formulario:** si el usuario no rellena todos los campos obligatorios del formulario, o los rellena de forma incorecta, los datos no se enviarán y el usuario recibirá una notificación de alerta sobre la necesidad de rellenar los campos obligatorios. 
 - **Guardar Lista:** Actualmente no es funcional, el botón de "Guardar Lista" por ahora muestra un mensaje de alerta al pulsarse.
 - **Seleccionar Lista Guardada:** Permite cargar listas anteriormente guardadas, aunque esta función no está operativa en la versión actual.
 
@@ -71,10 +69,10 @@ Clona el repositorio desde https://github.com/YuliiaBi1a/PROJECT-4-Angy-Lidia-An
 
 ## Desarrolladoras:
 [YuliiaBi1a](https://github.com/YuliiaBi1a)
-[angylearns] (https://github.com/angylearns)
-[Lidia Pérez] (https://github.com/Lidia-PG)
-[Analucena53] (https://github.com/Analucena53)
-[Pilar Sedeño Durán] (https://github.com/Pilarsededuran)
+[angylearns](https://github.com/angylearns)
+[Lidia Pérez](https://github.com/Lidia-PG)
+[Analucena53](https://github.com/Analucena53)
+[Pilar Sedeño Durán](https://github.com/Pilarsededuran)
 
 ---
 
