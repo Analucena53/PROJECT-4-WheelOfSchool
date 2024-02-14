@@ -68,11 +68,11 @@ Todas las vistas de la aplicación son responsive, se adaptan a la visualizació
 Clona el repositorio desde https://github.com/YuliiaBi1a/PROJECT-4-Angy-Lidia-Ana-Pili/edit/main/README.md
 
 ## Desarrolladoras:
-[YuliiaBi1a](https://github.com/YuliiaBi1a)
-[angylearns](https://github.com/angylearns)
-[Lidia Pérez](https://github.com/Lidia-PG)
-[Analucena53](https://github.com/Analucena53)
-[Pilar Sedeño Durán](https://github.com/Pilarsededuran)
+- [YuliiaBi1a](https://github.com/YuliiaBi1a)
+- [angylearns](https://github.com/angylearns)
+- [Lidia Pérez](https://github.com/Lidia-PG)
+- [Analucena53](https://github.com/Analucena53)
+- [Pilar Sedeño Durán](https://github.com/Pilarsededuran)
 
 ---
 
